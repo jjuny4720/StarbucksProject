@@ -38,9 +38,50 @@
   <link rel="icon" href="./favicon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
   <!-- 같은 폴더 안에 favicon 파일이 있으면 홈페이지 옆 아이콘으로 툴에 뜨게됨 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <!-- google fonts에서 사용되는 폰트들을 사용하겠다고 명시 (그후 css 작성) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- google material.io에서 갖가지 icon들을 사용할 수 있다. -->
   <link rel="stylesheet" href="./css/main.css" />
+  <script defer src="./js/main.js"></script>
 </head>
 <body>
-  <h1>Starbucks</h1>
+
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+
+      <a href= "/" class="logo">
+        <img src="./images/starbucks_logo.png" alt="STARBUCKS" />
+      </a>
+
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="/signin">Sign In</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">My Starbucks</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Custimer Service & Ideas</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Find a Store</a>
+          </li>
+        </ul>
+        <div class="search">
+          <input type="text" />
+          <div class="material-icons">
+            search
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
 </body>
 </html>
