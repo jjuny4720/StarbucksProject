@@ -33,3 +33,12 @@ window.addEventListener('scroll', _.throttle(function () {
     });
   }
 }, 300));
+
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1)*.7, //0.7, 1.4, 2.1, 2.7
+    opacity: 1
+  });
+});
