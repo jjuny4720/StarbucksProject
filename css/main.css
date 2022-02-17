@@ -308,7 +308,45 @@ header .badges .badge{
   background-color: #f6f5ef;
 }
 .notice .notice-line .inner{
-  height: 200px;
+  height: 62px;
+  display: flex;
+}
+.notice .notice-line .inner_left{
+  width: 60%;
+  height: 100%;
+  background-color: #333;
+  display:flex;
+  align-items: center;
+}
+.notice .notice-line .inner_left h2{
+  color: #FFF;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.notice .notice-line .inner_left .swiper-container{
+  height: 62px;
+  background-color: orange;
+  flex-grow: 1;
+  /* display:flex 를 줬을때 그 안에 있는 아이템이 높이값이 따로 지정이 안되어 있으면 최대한 늘어나려는 성질을 갖는다
+align-items : strach가 기본값.*/
+}
+.notice .notice-line .inner_left .notice-line_more{
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice .notice-line .inner_left .notice-line_more .material-icons{
+  color: #fff;
+  font-size: 30px;
+
+
+}
+.notice .notice-line .inner_right{
+  width: 40%;
+  height: 100%;
 }
   /* main
 main .coffee__title{
