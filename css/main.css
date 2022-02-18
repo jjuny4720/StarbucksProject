@@ -5,18 +5,19 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 3000px;
 }
 img{
   display: block;
 }
 a{
   text-decoration: none;
+  z-index: -1;
 }
-.inner{
+.inner {
   width: 1100px;
   margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 .btn{
   width: 130px;
@@ -238,116 +239,136 @@ header .badges .badge{
 }
 
 /* VISUAL */
-.visual{
+.visual {
   margin-top: 120px;
-  background-image: url(../images/visual_bg.jpg);
+  background-image: url("../images/visual_bg.jpg");
   background-position: center;
 }
-.visual .inner{
+.visual .inner {
   height: 646px;
 }
-.visual .tilte{
+.visual .title {
   position: absolute;
   top: 88px;
   left: -10px;
 }
-.visual .title .btn{
+.visual .title .btn {
   position: absolute;
   top: 259px;
   left: 173px;
 }
-.visual .cup1.image{
+.visual .cup1.image {
   position: absolute;
   bottom: 0;
   right: -47px;
 }
-.visual .cup1.text{
+.visual .cup1.text {
   position: absolute;
   top: 38px;
   right: 171px;
 }
-.visual .cup2.image{
-  position:absolute;
+.visual .cup2.image {
+  position: absolute;
   bottom: 0;
   right: 162px;
 }
-.visual .cup2.text{
+.visual .cup2.text {
   position: absolute;
   top: 321px;
   right: 416px;
 }
-.visual .spoon{
+.visual .spoon {
   position: absolute;
   bottom: 0;
   left: 275px;
 }
-.visual .fade-in{
+.visual .fade-in {
   opacity: 0;
 }
 /* NOTICE */
-.notice{
-
-}
-.notice .notice-line{
+.notice .notice-line {
   position: relative;
 }
-.notice .notice-line .bg-left{
-  position:absolute;
-  top: 0;
-  left: 0;
+.notice .notice-line .bg-left {
   width: 50%;
   height: 100%;
   background-color: #333;
-}
-.notice .notice-line  .bg-right{
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
+}
+.notice .notice-line .bg-right {
   width: 50%;
   height: 100%;
   background-color: #f6f5ef;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-.notice .notice-line .inner{
+.notice .notice-line .inner {
   height: 62px;
+  z-index: 1;
   display: flex;
 }
-.notice .notice-line .inner_left{
+.notice .notice-line .inner__left {
   width: 60%;
   height: 100%;
   background-color: #333;
-  display:flex;
+  display: flex;
   align-items: center;
 }
-.notice .notice-line .inner_left h2{
-  color: #FFF;
+.notice .notice-line .inner__left h2 {
+  color: #fff;
   font-size: 17px;
   font-weight: 700;
   margin-right: 20px;
 }
-.notice .notice-line .inner_left .swiper-container{
+.notice .notice-line .inner__left .swiper-container {
   height: 62px;
-  background-color: orange;
   flex-grow: 1;
-  /* display:flex 를 줬을때 그 안에 있는 아이템이 높이값이 따로 지정이 안되어 있으면 최대한 늘어나려는 성질을 갖는다
-align-items : strach가 기본값.*/
 }
-.notice .notice-line .inner_left .notice-line_more{
+.notice .notice-line .inner__left .swiper-slide {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+.notice .notice-line .inner__left .swiper-slide a {
+  color: #fff;
+}
+.notice .notice-line .inner__left .notice-line__more {
   width: 62px;
   height: 62px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.notice .notice-line .inner_left .notice-line_more .material-icons{
+.notice .notice-line .inner__left .notice-line__more .material-icons {
   color: #fff;
   font-size: 30px;
-
-
 }
-.notice .notice-line .inner_right{
+.notice .notice-line .inner__right {
   width: 40%;
   height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
+.notice .notice-line .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.notice .notice-line .inner__right .toggle-promotion {
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice .notice-line .inner__right .toggle-promotion .material-icons {
+  font-size: 30px;
+}
+
   /* main
 main .coffee__title{
   font-size: 50px;
