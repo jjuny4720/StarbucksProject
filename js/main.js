@@ -49,13 +49,14 @@ fadeEls.forEach(function (fadeEl, index) {
   })
 })
 
-//new Swiper(선택자, 옵션)
-new Swiper('.notice-line .swiper-container', {
+/**
+ * 슬라이드 요소 관리
+ */
+ new Swiper('.notice-line .swiper-container', {
   direction: 'vertical', // 수직 슬라이드
   autoplay: true, // 자동 재생 여부
   loop: true // 반복 재생 여부
 })
-
 new Swiper('.promotion .swiper-container', {
   // direction: 'horizontal', // 수평 슬라이드
   autoplay: { // 자동 재생 여부
@@ -72,5 +73,31 @@ new Swiper('.promotion .swiper-container', {
   navigation: { // 슬라이드 이전/다음 버튼 사용 여부
     prevEl: '.promotion .swiper-prev', // 이전 버튼 선택자
     nextEl: '.promotion .swiper-next' // 다음 버튼 선택자
+  }
+})
+new Swiper('.awards .swiper-container', {
+  // direction: 'horizontal', // 수평 슬라이드
+  autoplay: true, // 자동 재생 여부
+  loop: true, // 반복 재생 여부
+  spaceBetween: 30, // 슬라이드 사이 여백
+  slidesPerView: 5, // 한 번에 보여줄 슬라이드 개수
+  // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  navigation: { // 슬라이드 이전/다음 버튼 사용 여부
+    prevEl: '.awards .swiper-prev', // 이전 버튼 선택자
+    nextEl: '.awards .swiper-next' // 다음 버튼 선택자
+  }
+})
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion')
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function(){
+  isHidePromotion = !isHidePromotion
+  if(isHidePromotion){
+    //숨김처리!
+    promotionEl.classList.add('hide');
+  }else{
+    //보임 처리!
+    promotionEl.classList.remove('hide');
   }
 })
